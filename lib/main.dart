@@ -58,13 +58,13 @@ class _QuizPageState extends State<QuizPage> {
                       margin: EdgeInsets.fromLTRB(0, 8, 8, 8),
                       alignment: Alignment.centerRight,
                       child: TextField(
-                        style: TextStyle(),
+                        style: TextStyle(fontSize: 22,),
                         controller: myController,
                         keyboardType: TextInputType.number,
                         autocorrect: false,
                         autofocus: true,
-//                            showCursor: false,
-//                            textAlign: TextAlign.center,
+                        showCursor: false,
+                        textAlign: TextAlign.center,
                       ),
                     ),
                   )
