@@ -31,7 +31,7 @@ class _QuizPageState extends State<QuizPage> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.green,
+          backgroundColor: Color(0xFF28D62B),
           title: Text('MathWiz'),
           centerTitle: true,
         ),
