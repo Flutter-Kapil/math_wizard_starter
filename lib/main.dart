@@ -42,22 +42,32 @@ class _QuizPageState extends State<QuizPage> {
               child: Row(
                 children: <Widget>[
                   Expanded(
-                      flex: 3,
+                      flex: 2,
                       child: Container(
                           margin: EdgeInsets.fromLTRB(8, 8, 0, 8),
-                          alignment: Alignment.center,
+                          alignment: Alignment.centerRight,
                           child: Text(
                             "$a + $b =",
                             style: TextStyle(fontSize: 40, color: Colors.green),
                           ))),
                   Expanded(
-                    flex: 2,
+                    flex: 1,
                     child: Container(
                       height: 40,
 //
-                      margin: EdgeInsets.fromLTRB(0, 8, 8, 8),
+                      margin: EdgeInsets.fromLTRB(4, 8, 20, 8),
                       alignment: Alignment.centerRight,
                       child: TextField(
+                        decoration: new InputDecoration(
+                          focusedBorder: OutlineInputBorder(
+                            borderSide:
+                                BorderSide(color: Colors.black, width: 1.0),
+                          ),
+                          enabledBorder: OutlineInputBorder(
+                            borderSide:
+                                BorderSide(color: Colors.red, width: 5.0),
+                          ),
+                        ),
                         style: TextStyle(
                           fontSize: 22,
                         ),
