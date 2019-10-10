@@ -17,6 +17,7 @@ class _QuizPageState extends State<QuizPage> {
   final myController = TextEditingController();
   int a = Random().nextInt(20);
   int b = Random().nextInt(20);
+
   int score = 0;
   @override
   void dispose() {
@@ -38,38 +39,36 @@ class _QuizPageState extends State<QuizPage> {
           children: <Widget>[
             Expanded(
               flex: 2,
-              child: Container(
-                child: Padding(
-                  padding: const EdgeInsets.all(18.0),
-                  child: Row(
-                    children: <Widget>[
-                      Expanded(
-                          flex: 3,
-                          child: Container(
-                              margin: EdgeInsets.all(8.0),
-                              alignment: Alignment.center,
-                              child: Text(
-                                "$a+$b=",
-                                style: TextStyle(
-                                    fontSize: 40, color: Colors.green),
-                              ))),
-                      Expanded(
-                        flex: 2,
-                        child: Container(
-                          padding: EdgeInsets.all(5),
-                          margin: EdgeInsets.all(8.0),
-                          alignment: Alignment.centerRight,
-                          child: TextField(
-                            controller: myController,
-                            keyboardType: TextInputType.number,
-                            autocorrect: false,
-                            autofocus: true,
-                          ),
-                        ),
-                      )
-                    ],
-                  ),
-                ),
+              child: Row(
+                children: <Widget>[
+                  Expanded(
+                      flex: 3,
+                      child: Container(
+                          margin: EdgeInsets.fromLTRB(8, 8, 0, 8),
+                          alignment: Alignment.center,
+                          child: Text(
+                            "$a + $b =",
+                            style: TextStyle(fontSize: 40, color: Colors.green),
+                          ))),
+                  Expanded(
+                    flex: 2,
+                    child: Container(
+                      height: 40,
+//
+                      margin: EdgeInsets.fromLTRB(0, 8, 8, 8),
+                      alignment: Alignment.centerRight,
+                      child: TextField(
+                        style: TextStyle(),
+                        controller: myController,
+                        keyboardType: TextInputType.number,
+                        autocorrect: false,
+                        autofocus: true,
+//                            showCursor: false,
+//                            textAlign: TextAlign.center,
+                      ),
+                    ),
+                  )
+                ],
               ),
             ),
 //            Expanded(flex: 1, child: Container(child: Text(myController.text))),
@@ -92,6 +91,7 @@ class _QuizPageState extends State<QuizPage> {
                       }
                       a = Random().nextInt(20);
                       b = Random().nextInt(20);
+                      myController.text = "";
                       setState(() {});
                     },
                   ),
@@ -106,6 +106,7 @@ class _QuizPageState extends State<QuizPage> {
                     onPressed: () {
                       a = Random().nextInt(20);
                       b = Random().nextInt(20);
+                      myController.text = "";
                       setState(() {});
                     },
                   ),
