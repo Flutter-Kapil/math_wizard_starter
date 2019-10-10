@@ -40,9 +40,14 @@ class _QuizPageState extends State<QuizPage> {
             Expanded(
               flex: 2,
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
                   Expanded(
-                      flex: 2,
+                    flex: 1,
+                    child: SizedBox(),
+                  ),
+                  Expanded(
+                      flex: 3,
                       child: Container(
                           margin: EdgeInsets.fromLTRB(8, 8, 0, 8),
                           alignment: Alignment.centerRight,
@@ -51,7 +56,7 @@ class _QuizPageState extends State<QuizPage> {
                             style: TextStyle(fontSize: 40, color: Colors.green),
                           ))),
                   Expanded(
-                    flex: 1,
+                    flex: 2,
                     child: Container(
                       height: 40,
 //
@@ -79,7 +84,11 @@ class _QuizPageState extends State<QuizPage> {
                         textAlign: TextAlign.center,
                       ),
                     ),
-                  )
+                  ),
+                  Expanded(
+                    flex: 1,
+                    child: SizedBox(),
+                  ),
                 ],
               ),
             ),
